@@ -29,9 +29,14 @@ export default function ActionCard() {
         <View style={styles.footerContainer}>
           <TouchableOpacity style={styles.button}
             onPress={() => openWebsite('https://www.youtube.com/')}>
-            <Text style={[styles.headerText, styles.buttonText]}>For More</Text>
+            <Text style={ styles.buttonText}>Read More</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}
+            onPress={() => openWebsite('https://www.youtube.com/')}>
+            <Text style={ styles.buttonText}> Follow Me</Text>
           </TouchableOpacity>
         </View>
+        
       </View>
       
     </View>
@@ -52,7 +57,7 @@ const styles = StyleSheet.create({
   },
   card: {
     backgroundColor:'#E2DFD2',
-    height:280,
+    height:310,
     width:380,
     marginHorizontal:15,
     marginVertical:12,
@@ -64,8 +69,10 @@ const styles = StyleSheet.create({
   headerText: {
     color: '#000',
     margin:10,
+    padding:3,
     fontSize:17,
-    fontWeight:'900'
+    fontWeight:'900',
+    borderBottomWidth:1,
   },
   imageStyle: {
     height: 100,
@@ -84,6 +91,9 @@ const styles = StyleSheet.create({
     fontWeight:'600'
   },
   footerContainer: {
+    display:'flex',
+    flexDirection:'row',
+    justifyContent:'space-around'
     
   },
   button: {
